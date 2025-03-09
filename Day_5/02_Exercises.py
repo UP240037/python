@@ -65,4 +65,3 @@ countries = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
 first_three, *scandic_countries = countries
 print("First three countries:", first_three)
 print("Scandic countries:", scandic_countries)
-
