@@ -17,12 +17,18 @@ print(numbers)
 #4. Flatten the following list to a new list:
 countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
 
-[['FINLAND','FIN', 'HELSINKI'], ['SWEDEN', 'SWE', 'STOCKHOLM'], ['NORWAY', 'NOR', 'OSLO']]
+country_codes = {
+    'Finland': 'FIN',
+    'Sweden': 'SWE',
+    'Norway': 'NOR'
+}
 
-filtered_countries = [item for sublist in countries for item in sublist[0]]
+transformed_countries = [
+    [country[0].upper(), country_codes[country[0]], country[1].upper()]
+    for sublist in countries for country in sublist
+]
 
-mayus_countries = [i.upper() for i in filtered_countries]
-print(mayus_countries)
+print(transformed_countries)
 
 #5. Change the following list to a list of dictionaries:
 countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
