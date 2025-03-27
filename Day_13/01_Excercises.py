@@ -11,7 +11,7 @@ filtered_list = [item for sublist in list_of_lists for item in sublist[0]]
 print(filtered_list)
 
 #3. Using list comprehension create the following list of tuples:
-numbers = [(i,1, i**2,i**3,i**4,i**5) for i in range(0,11)]
+numbers = [(i,1, i, i**2,i**3,i**4,i**5) for i in range(0,11)]
 print(numbers) 
 
 #4. Flatten the following list to a new list:
